@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAZAS | National Association of Zazzau Students</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/nazas-logo.png">
+
+<link rel="apple-touch-icon" href="images/nazas-logo.png">
+
+<meta name="msapplication-TileColor" content="#008000">
+</head>
+<body>
+
+<!-- TOP NAVIGATION -->
+<header class="top-nav">
+  <div class="nav-container">
+
+    <div class="logo">
+      <img src="images/nazas-logo.png" alt="NAZAS Logo">
+      <span>NATIONAL ASSOCIATION OF ZAZZAU STUDENTS</span>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="index.html#about-section">About ▾</a>
+        <div class="dropdown-content">
+          <a href="history.html">History of NAZAS</a>
+          <a href="index.html#mission">Mission & Vision</a>
+          <a href="index.html#constitution">Constitution</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Leadership ▾</a>
+        <div class="dropdown-content">
+          <a href="index.html#past-presidents">Past Presidents</a>
+          <a href="index.html#current-execs">Current Executives</a>
+        </div>
+      </div>
+
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#contact">Contact Us</a>
+    </nav>
+
+    <div class="contact-btn">
+      <span>📞</span>
+      <a href="tel:+2348000000000">+234 800 000 0000</a>
+    </div>
+
+  </div>
+</header>
+  </header>
+  
+  
+  <!-- HERO SLIDER -->
+  <section class="slider">
+
+    <div class="slides fade">
+      <img src="images/slide1.jpg" alt="NAZAS Unity">
+      <div class="caption">
+        <h1>National Association of Zazzau Students</h1>
+        <p><strong>One Voice. One Identity. One Future.</strong></p>
+        <p>NAZAS unites Zazzau students across institutions for collective progress.</p>
+      </div>
+    </div>
+
+    <div class="slides fade">
+      <img src="images/slide2.jpg" alt="NAZAS Legacy">
+      <div class="caption">
+        <h1>Preserving Our Legacy</h1>
+        <p>Built on the sacrifices, leadership, and vision of past presidents.</p>
+      </div>
+    </div>
+
+    <div class="slides fade">
+      <img src="images/slide3.jpg" alt="NAZAS Progress">
+      <div class="caption">
+        <h1>Shaping the Future</h1>
+        <p>Empowering students through leadership, advocacy, and unity.</p>
+      </div>
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+  </section>
+
+  <!-- DOTS -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- WELCOME SECTION -->
+  <section class="welcome">
+    <h2>Welcome to NAZAS</h2>
+    <p>
+      This is the official digital home of the National Association of Zazzau Students.
+      We preserve our history, honor leadership, and promote unity among students.
+    </p>
+  </section>
+
+   <!-- ABOUT NAZAS SECTION -->
+<section class="about-nazas">
+
+  <div class="about-container">
+
+    <!-- IMAGE GRID -->
+    <div class="about-images">
+      <img src="images/NAZAS1.jpg" alt="NAZAS Leadership">
+      <img src="images/NAZAS2.jpg" alt="NAZAS Unity">
+      <img src="images/NAZAS3.jpg" alt="NAZAS Programs">
+      <img src="images/NAZAS4.jpg" alt="NAZAS Events">
+    </div>
+
+    <!-- TEXT CONTENT -->
+    <div class="about-content">
+      <h2>The United Voice of Zazzau Students</h2>
+
+      <p class="about-text">
+        The National Association of Zazzau Students (NAZAS) is the central
+        student body representing Zazzau students across higher institutions.
+        The association stands as a symbol of unity, leadership, and progress.
+      </p>
+
+      <div class="about-stats">
+        <div>
+          <h3>100000+</h3>
+          <p>Student Members</p>
+        </div>
+        <div>
+          <h3>10+</h3>
+          <p>Local Chapters</p>
+        </div>
+        <div>
+          <h3>25+</h3>
+          <p>Years of Legacy</p>
+        </div>
+      </div>
+
+      <a href="#" class="about-btn">About NAZAS</a>
+    </div>
+
+    <section id="history" class="history-teaser">
+      <div class="container-fluid">
+          <div class="teaser-wrapper">
+              
+              <div class="teaser-visual">
+                  <div class="image-stack">
+                      <div class="stack-backdrop"></div>
+                      <img src="images/history-preview.jpg" alt="NAZAS History" class="img-responsive">
+                      <div class="floating-stat">
+                          <span class="stat-number">25+</span>
+                          <span class="stat-text">Years of Impact</span>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="teaser-content">
+                  <div class="content-heading">
+                      <span class="badge-green">Founded in 2000</span>
+                      <h2 class="display-title">The Journey of <span>NAZAS</span></h2>
+                      <div class="title-underline"></div>
+                  </div>
+                  
+                  <div class="text-block">
+                      <p>
+                          The National Association of Zazzau Students (NAZAS) was born out of a deep desire to unite students across various tertiary institutions. Tracing its roots back to the late 1990s, the association began with informal groupings at Ahmadu Bello University (ABU), Zaria.
+                      </p>
+                      <p>
+                          In the year 2000, these parallel efforts were harmonized into a single, unified platform under the leadership of pioneer president <strong>Hon. Ahmed Maiyaki</strong>. This unification marked a critical turning point for the representation of Zazzau students nationwide.
+                      </p>
+                      <p class="hide-mobile">
+                          Today, NAZAS stands as a legacy institution—preserving cultural heritage through campus Durbars and promoting educational development through vital partnerships.
+                      </p>
+                  </div>
+  
+                  <div class="button-group">
+                      <a href="history.html" class="btn-main">Explore Full History <i class="fas fa-arrow-right"></i></a>
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+  </section>
+
+
+  </div>
+  <section id="past-presidents" class="presidents-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">The Legacy <br> <span>Past Presidents</span></h2>
+            <div class="search-box">
+                <input type="text" id="presSearch" onkeyup="filterPresidents()" placeholder="Search name or year...">
+            </div>
+        </div>
+        
+        <div class="presidents-grid" id="presGrid">
+            <div class="president-card" onclick="viewProfile('Hon. Ahmed Maiyaki', '2000/2001', 'images/pres-1.jpg', 'Ahmed Maiyaki is the Commissioner for Information in Kaduna State, appointed in July 2025 under Governor Uba Sani’s APC administration. A seasoned media strategist and journalist with a Master’s in Mass Communication from Ahmadu Bello University, he previously led the Kaduna State Media Corporation and headed media affairs across campaigns and government. Known for shaping public trust, he’s now spearheading a proactive and citizen-centered information framework in the state.')">
+                <div class="card-front"><img src="images/pres-1.jpg" alt="P"><div class="tenure-badge">2000/2001</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Hon. Ahmed Maiyaki</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Late. Mukhtar Lawal', '2001/2002', 'images/pres-2.jpg', 'Championed student welfare and established new scholarship links.')">
+                <div class="card-front"><img src="images/pres-2.jpg" alt="P"><div class="tenure-badge">2001/2002</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Late. Mukhtar Lawal</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Bashir S. Kudan', '2003/2004', 'images/pres-3.jpg', 'Known for organizing the most successful Zazzau Cultural Day in a decade.')">
+                <div class="card-front"><img src="images/pres-3.jpg" alt="P"><div class="tenure-badge">2003/2004</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Bashir S. Kudan</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Ahmad Yahaya Lere', '2005/2006', 'images/pres-4.jpg', 'Default biography for president 4.')">
+                <div class="card-front"><img src="images/pres-4.jpg" alt="P"><div class="tenure-badge">2005/2006</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Ahmad Yahaya Lere</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Mal. Umar Yahaya', '2006/2007', 'images/pres-5.jpg', 'Default biography for president 5.')">
+                <div class="card-front"><img src="images/pres-5.jpg" alt="P"><div class="tenure-badge">2006/2007</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Mal. Umar Yahaya</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Aliyu Shehu Zaki', '2007/2008', 'images/pres-6.jpg', 'Default biography for president 6.')">
+                <div class="card-front"><img src="images/pres-6.jpg" alt="P"><div class="tenure-badge">2007/2008</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Aliyu Shehu Zaki</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Hamza Jaafar Ishaq', '2008/2009', 'images/pres-7.jpg', 'Default biography for president 7.')">
+                <div class="card-front"><img src="images/pres-7.jpg" alt="P"><div class="tenure-badge">2008/2009</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Hamza Jaafar Ishaq</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Usman Ahmed Danbaba', '2009/2010', 'images/pres-8.jpg', 'Default biography for president 8.')">
+                <div class="card-front"><img src="images/pres-8.jpg" alt="P"><div class="tenure-badge">2009/2010</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Usman Ahmed Danbaba</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Musa M Lawal', '2010/2011', 'images/pres-9.jpg', 'Default biography for president 9.')">
+                <div class="card-front"><img src="images/pres-9.jpg" alt="P"><div class="tenure-badge">2010/2011</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Musa M Lawal</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Abdulraheem Mahmud Dogara', '2011', 'images/pres-10.jpg', 'Default biography for president 10.')">
+                <div class="card-front"><img src="images/pres-10.jpg" alt="P"><div class="tenure-badge">2011</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Abdulraheem Mahmud Dogara</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Bashir Abdullahi', '2011/2012', 'images/pres-11.jpg', 'Default biography for president 11.')">
+                <div class="card-front"><img src="images/pres-11.jpg" alt="P"><div class="tenure-badge">2011/2012</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Bashir Abdullahi</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Bashir Abdullahi', '2012/2013', 'images/pres-12.jpg', 'Default biography for president 12.')">
+                <div class="card-front"><img src="images/pres-12.jpg" alt="P"><div class="tenure-badge">2012/2013</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Bashir Abdullahi</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Abubakar Aminu', '2013/2014', 'images/pres-13.jpg', 'Default biography for president 13.')">
+                <div class="card-front"><img src="images/pres-13.jpg" alt="P"><div class="tenure-badge">2013/2014</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Abubakar Aminu</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Fahad Aliyu Gongola', '2014/2015', 'images/pres-14.jpg', 'Default biography for president 14.')">
+                <div class="card-front"><img src="images/pres-14.jpg" alt="P"><div class="tenure-badge">2014/2015</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Fahad Aliyu Gongola</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Ahmad Ladan', '2015/2016', 'images/pres-15.jpg', 'Default biography for president 15.')">
+                <div class="card-front"><img src="images/pres-15.jpg" alt="P"><div class="tenure-badge">2015/2016</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Ahmad Ladan</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Mukhtar Hussaini Sambo', '2016/2017', 'images/pres-16.jpg', 'Default biography for president 16.')">
+                <div class="card-front"><img src="images/pres-16.jpg" alt="P"><div class="tenure-badge">2016/2017</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Mukhtar Hussaini Sambo</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Nurudeen Sunusi Shehu', '2017/2018', 'images/pres-17.jpg', 'Default biography for president 17.')">
+                <div class="card-front"><img src="images/pres-17.jpg" alt="P"><div class="tenure-badge">2017/2018</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Nurudeen Sunusi Shehu</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Saeed Shehu Bako', '2018/2019', 'images/pres-18.jpg', 'Default biography for president 18.')">
+                <div class="card-front"><img src="images/pres-18.jpg" alt="P"><div class="tenure-badge">2018/2019</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Saeed Shehu Bako</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Umar Sulaiman Doko', '2019/2021', 'images/pres-19.jpg', 'Default biography for president 19.')">
+                <div class="card-front"><img src="images/pres-19.jpg" alt="P"><div class="tenure-badge">2019/2021</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Umar Sulaiman Doko</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Ahmad Abubakar Tijjani', '2021/2022', 'images/pres-20.jpg', 'Default biography for president 20.')">
+                <div class="card-front"><img src="images/pres-20.jpg" alt="P"><div class="tenure-badge">2021/2022</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Ahmad Abubakar Tijjani</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Ahmed Ibrahim Mohammed', '2022/2023', 'images/pres-21.jpg', 'Default biography for president 21.')">
+                <div class="card-front"><img src="images/pres-21.jpg" alt="P"><div class="tenure-badge">2022/2023</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Ahmed Ibrahim Mohammed</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Mubarak Sulaiman Ikara', '2023/2024', 'images/pres-22.jpg', 'Default biography for president 22.')">
+                <div class="card-front"><img src="images/pres-22.jpg" alt="P"><div class="tenure-badge">2023/2024</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Mubarak Sulaiman Ikara</h4><span class="view-profile">View Profile</span></div>
+            </div>
+            <div class="president-card" onclick="viewProfile('Abubakar Abdulkadir', '2024-present', 'images/pres-23.jpg', 'Default biography for president 23.')">
+                <div class="card-front"><img src="images/pres-23.jpg" alt="P"><div class="tenure-badge">2024-present</div></div>
+                <div class="card-overlay"><h4 class="pres-name">Abubakar Abdulkadir</h4><span class="view-profile">View Profile</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalImg" src="" alt="President Photo">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName">Name</h2>
+                    <h4 id="modalTenure">Tenure</h4>
+                    <div class="modal-divider"></div>
+                    <p id="modalBio">Biography details...</p>
+                    <button class="modal-close-tab" onclick="closeModal()">Close Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="presidents-marquee-section">
+  <div class="marquee-container">
+      <div class="marquee-title-centered">
+          <h2>The Current <span>Executives</span></h2>
+          <div class="green-underline"></div>
+      </div>
+      
+      <div class="marquee-wrapper">
+          <div class="marquee-content">
+              <div class="marquee-item" onclick="viewProfile('Hon. Ahmed Maiyaki', '2000/2001', 'images/pres-1.jpg', '...')">
+                  <img src="images/pres-1.jpg" alt="President">
+                  <h5>Hon. Ahmed Maiyaki</h5>
+                  <span>2000/2001</span>
+              </div>
+              <div class="marquee-item" onclick="viewProfile('Late. Mukhtar Lawal', '2001/2002', 'images/pres-2.jpg', '...')">
+                  <img src="images/pres-2.jpg" alt="President">
+                  <h5>Late. Mukhtar Lawal</h5>
+                  <span>2001/2002</span>
+              </div>
+              <div class="marquee-item"><img src="images/pres-3.jpg"><h5>Bashir S. Kudan</h5><span>2003/2004</span></div>
+              <div class="marquee-item"><img src="images/pres-4.jpg"><h5>Ahmad Yahaya Lere</h5><span>2005/2006</span></div>
+              <div class="marquee-item"><img src="images/pres-5.jpg"><h5>Mal. Umar Yahaya</h5><span>2006/2007</span></div>
+              <div class="marquee-item"><img src="images/pres-6.jpg"><h5>Aliyu Shehu Zaki</h5><span>2007/2008</span></div>
+              <div class="marquee-item"><img src="images/pres-7.jpg"><h5>Hamza Jaafar Ishaq</h5><span>2008/2009</span></div>
+              <div class="marquee-item"><img src="images/pres-8.jpg"><h5>Usman Ahmed Danbaba</h5><span>2009/2010</span></div>
+              <div class="marquee-item"><img src="images/pres-9.jpg"><h5>Musa M Lawal</h5><span>2010/2011</span></div>
+              <div class="marquee-item"><img src="images/pres-10.jpg"><h5>Abdulraheem Mahmud Dogara</h5><span>2011</span></div>
+              <div class="marquee-item"><img src="images/pres-11.jpg"><h5>Bashir Abdullahi</h5><span>2011/2012</span></div>
+              <div class="marquee-item"><img src="images/pres-12.jpg"><h5>Bashir Abdullahi</h5><span>2012/2013</span></div>
+              <div class="marquee-item"><img src="images/pres-13.jpg"><h5>Abubakar Aminu</h5><span>2013/2014</span></div>
+              <div class="marquee-item"><img src="images/pres-14.jpg"><h5>Fahad Aliyu Gongola</h5><span>2014/2015</span></div>
+              <div class="marquee-item"><img src="images/pres-15.jpg"><h5>Ahmad Ladan</h5><span>2015/2016</span></div>
+              <div class="marquee-item"><img src="images/pres-16.jpg"><h5>Mukhtar Hussaini Sambo</h5><span>2016/2017</span></div>
+              <div class="marquee-item"><img src="images/pres-17.jpg"><h5>Nurudeen Sunusi Shehu</h5><span>2017/2018</span></div>
+              <div class="marquee-item"><img src="images/pres-18.jpg"><h5>Saeed Shehu Bako</h5><span>2018/2019</span></div>
+              <div class="marquee-item"><img src="images/pres-19.jpg"><h5>Umar Sulaiman Doko</h5><span>2019/2021</span></div>
+              <div class="marquee-item"><img src="images/pres-20.jpg"><h5>Ahmad Abubakar Tijjani</h5><span>2021/2022</span></div>
+              <div class="marquee-item"><img src="images/pres-21.jpg"><h5>Ahmed Ibrahim Mohammed</h5><span>2022/2023</span></div>
+              <div class="marquee-item"><img src="images/pres-22.jpg"><h5>Mubarak Sulaiman Ikara</h5><span>2023/2024</span></div>
+              <div class="marquee-item"><img src="images/pres-23.jpg"><h5>Abubakar Abdulkadir</h5><span>2024-Present</span></div>
+
+              <div class="marquee-item"><img src="images/pres-1.jpg"><h5>Hon. Ahmed Maiyaki</h5><span>2000/2001</span></div>
+              <div class="marquee-item"><img src="images/pres-2.jpg"><h5>Late. Mukhtar Lawal</h5><span>2001/2002</span></div>
+              <div class="marquee-item"><img src="images/pres-3.jpg"><h5>Bashir S. Kudan</h5><span>2003/2004</span></div>
+              </div>
+      </div>
+  </div>
+</section>
+<footer id="contact" class="main-footer">
+  <div class="footer-container">
+      <div class="footer-brand">
+          <div class="footer-logo">
+              <img src="images/nazas-logo.png" alt="NAZAS Logo">
+              <h3>NATIONAL ASSOCIATION OF <br> <span>ZAZZAU STUDENTS</span></h3>
+          </div>
+          <p class="footer-desc">
+              This is the umbrella body of all Zazzau students across higher institutions. 
+              Feel free to contact us for partnerships, support, or inquiries regarding 
+              student welfare and heritage.
+          </p>
+          <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>Copyright ©2026 National Association Of Zazzau Students. Designed by <span>Flinix Technologies</span></p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
