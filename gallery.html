@@ -6,29 +6,39 @@
     <title>Gallery | NAZAS National</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/nazas-logo.png">
+
 </head>
 <body>
 
-    <header class="top-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="images/nazas-logo.png" alt="NAZAS Logo">
-                <span>NATIONAL ASSOCIATION OF ZAZZAU STUDENTS</span>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <div class="dropdown">
-                    <a href="index.html#about-section">About ▾</a>
-                    <div class="dropdown-content">
-                        <a href="history.html">History of NAZAS</a>
-                        <a href="index.html#mission">Mission & Vision</a>
-                    </div>
-                </div>
-                <a href="gallery.html">Gallery</a>
-                <a href="index.html#contact">Contact Us</a>
-            </nav>
+  
+<!-- TOP NAVIGATION -->
+<header class="top-nav">
+    <div class="nav-container">
+      
+      <div class="logo">
+        <img src="images/nazas-logo.png" alt="NAZAS Logo">
+        <div class="logo-text-wrapper">
+          <span class="logo-main-text">NAZAS</span>
+          <span class="logo-sub-text">National Association of Zazzau Students</span>
         </div>
-    </header>
+      </div>
+  
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+  
+      <nav class="nav-links" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+  
+    </div>
+  </header>
 
     <section class="gallery-hero">
         <h1>Moments & <span>Memories</span></h1>
@@ -39,29 +49,62 @@
         <div class="photo-grid">
             <div class="photo-item">
                 <img src="images/gallery-1.jpg" alt="Durbar Festival">
-                <div class="photo-overlay"><span>Durbar Celebration</span></div>
+                <div class="photo-overlay"><span></span></div>
             </div>
             <div class="photo-item tall">
                 <img src="images/gallery-2.jpg" alt="Student Meeting">
-                <div class="photo-overlay"><span>General Assembly</span></div>
+                <div class="photo-overlay"><span></span></div>
             </div>
             <div class="photo-item">
                 <img src="images/gallery-3.jpg" alt="Award Ceremony">
-                <div class="photo-overlay"><span>Award Night</span></div>
+                <div class="photo-overlay"><span></span></div>
             </div>
             <div class="photo-item wide">
                 <img src="images/gallery-4.jpg" alt="Group Photo">
-                <div class="photo-overlay"><span>NAZAS Executives</span></div>
+                <div class="photo-overlay"><span></span></div>
             </div>
             <div class="photo-item">
                 <img src="images/gallery-5.jpg" alt="Heritage Day">
-                <div class="photo-overlay"><span>Cultural Heritage Day</span></div>
+                <div class="photo-overlay"><span></span></div>
             </div>
             </div>
     </main>
 
     <footer class="main-footer">
         </footer>
+        <script>
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+        
+            mobileMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+        <footer id="contact" class="main-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/nazas-logo.png" alt="NAZAS Logo">
+                        <h3>NATIONAL ASSOCIATION OF <br> <span>ZAZZAU STUDENTS</span></h3>
+                    </div>
+                    <p class="footer-desc">
+                        This is the umbrella body of all Zazzau students across higher institutions. 
+                        Feel free to contact us for partnerships, support, or inquiries regarding 
+                        student welfare and heritage.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="footer-bottom">
+                <p>Copyright ©2026 National Association Of Zazzau Students. Designed by <span>Flinix Technologies</span></p>
+            </div>
+          </footer>
 
 </body>
 </html>

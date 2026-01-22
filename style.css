@@ -29,26 +29,91 @@
     object-fit: cover;
   }
   
+/* --- FINAL SLIDER TEXT FIX --- */
+/* --- THIS FIXES THE SQUEEZED TEXT --- */
+.caption {
+  position: absolute;
+  bottom: 30px; /* Moves it up from the dots */
+  left: 0;
+  width: 100% !important; /* Forces it to be wide, not squeezed */
+  background: rgba(0, 0, 0, 0.7) !important; /* Dark tint for readability */
+  padding: 20px !important;
+  
+  /* These two lines force the Title to be ABOVE the Paragraph */
+  display: flex !important;
+  flex-direction: column !important; 
+  
+  box-sizing: border-box !important;
+  text-align: left;
+}
+
+.caption h2 {
+  font-size: 1.4rem !important; /* Nice big title */
+  color: #ffffff !important;
+  margin: 0 0 8px 0 !important; /* Space between title and description */
+  white-space: normal !important; /* Allows text to wrap horizontally */
+  display: block !important;
+}
+
+.caption p {
+  font-size: 0.95rem !important;
+  color: #f0f0f0 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  display: block !important;
+}
+
+/* Adds the yellow/green accent bar from your 'Second' image */
+.caption {
+  border-left: 5px solid #008000;
+}/* --- THIS FORCES THE 'SECOND IMAGE' LOOK --- */
+/* --- RESTORE THE LEGACY SLIDER BOX LOOK --- */
+.caption {
+  position: absolute;
+  bottom: 15%; /* Positions the box nicely on the image */
+  left: 5%;
+  background: rgba(0, 0, 0, 0.75); /* The dark transparent box */
+  padding: 20px 25px;
+  border-left: 5px solid #ffcc00; /* That famous yellow accent bar */
+  max-width: 500px; /* Prevents the box from being too wide */
+  display: flex;
+  flex-direction: column; /* FORCES text to stack: H1 top, P bottom */
+  text-align: left;
+  z-index: 10;
+}
+
+.caption h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 10px 0; /* Space between title and description */
+  line-height: 1.2;
+}
+
+.caption p {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin: 5px 0 0 0;
+  line-height: 1.4;
+}
+
+/* --- MOBILE FIX (Ensures it doesn't squeeze) --- */
+@media screen and (max-width: 768px) {
   .caption {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    padding: 20px;
-    max-width: 500px;
-    border-left: 5px solid gold;
+      width: 90%;
+      left: 5%;
+      bottom: 10%;
+      padding: 15px;
   }
   
   .caption h1 {
-    margin-bottom: 10px;
-    font-size: 32px;
+      font-size: 1.2rem;
   }
   
   .caption p {
-    font-size: 16px;
+      font-size: 0.85rem;
   }
-  
+}
   /* ARROWS */
   .prev, .next {
     position: absolute;
@@ -110,154 +175,114 @@
     margin-bottom: 15px;
   }
   /* TOP NAVIGATION */
-/* TOP NAVIGATION */
-.top-nav {
-  background: #ffffff;
-  width: 100%;
-  border-bottom: 1px solid #eee;
-  /* Keeps the bar at the top while scrolling */
-  position: sticky;
-  top: 0;
-  z-index: 1000; 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
+/* --- HEADER CONTAINER --- */
 .nav-container {
-  /* Changed to 100% to allow items to move to the very edges */
-  width: 100%; 
-  max-width: 100%; 
-  margin: 0;
-  /* Smaller padding (e.g., 20px) makes items sit closer to the screen edge */
-  padding: 10px 30px; 
   display: flex;
+  justify-content: space-between; /* Pushes Logo to Left and Menu to Right */
   align-items: center;
-  justify-content: space-between;
-  position: relative;
+  padding: 10px 5%;
   height: 80px;
-  box-sizing: border-box; /* Ensures padding doesn't break the width */
+  background: #ffffff;
+}
+/* 1. Reset the whole page to remove hidden gaps */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
 }
 
-/* LOGO (STAYS FAR LEFT) */
+/* 2. Make the header transparent and sit OVER the image */
+.top-nav {
+  background: rgba(255, 255, 255, 0.95) !important; /* Slightly see-through white */
+  position: absolute !important; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0 !important;
+  border: none !important;
+}
+
+
+/* 3. Force the Slider to the very top */
+.slider, #slider {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  line-height: 0; /* Removes tiny gaps under images */
+}
+
+/* 4. Remove space from the Welcome Section */
+.welcome-section {
+  margin-top: 0 !important;
+  padding-top: 20px !important; /* Small space for breathing room */
+}
+/* --- LOGO STYLING --- */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  z-index: 10;
-  flex-shrink: 0;
+  gap: 15px;
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  height: 60px; /* Makes your logo visible again */
+  width: auto;
 }
 
-.logo span {
-  font-size: 18px;
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main-text {
+  font-size: 20px;
   font-weight: bold;
-  color: #008000;
-  white-space: nowrap;
+  color: #008000; /* Zazzau Green */
+  line-height: 1;
 }
 
-/* NAV LINKS (STAYS DEAD CENTER) */
+.logo-sub-text {
+  font-size: 10px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- NAV LINKS DECORATIONS --- */
 .nav-links {
   display: flex;
-  align-items: center;
-  gap: 35px;
-  /* Absolute centering trick */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  gap: 30px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #222;
+  color: #333;
+  font-weight: 600;
   font-size: 15px;
-  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
   transition: 0.3s;
+}
+
+/* New Decoration: Sliding Green Underline */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #008000;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
   color: #008000;
 }
 
-/* CONTACT BUTTON (STAYS FAR RIGHT) */
-.contact-btn {
-  background-color: #003d29; /* Dark green pill */
-  padding: 10px 25px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 10;
-  transition: 0.3s;
-  flex-shrink: 0;
+.nav-links a:hover::after {
+  width: 100%;
 }
 
-.contact-btn:hover {
-  background-color: #005a3c;
-  transform: scale(1.02);
-}
-
-.contact-btn a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-/* DROPDOWN STYLING */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-  border-radius: 4px;
-  padding: 10px 0;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  padding: 10px 20px;
-  display: block;
-  color: #333;
-}
-
-.dropdown-content a:hover {
-  background-color: #f8f8f8;
-}
-
-/* CONTACT BUTTON */
-.contact-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #0b3d2e;
-  padding: 10px 18px;
-  border-radius: 30px;
-}
-
-.contact-btn span {
-  background: #c7f000;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.contact-btn a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
 /* ABOUT NAZAS SECTION */
 .about-nazas {
   padding: 80px 20px;
@@ -365,21 +390,34 @@
   display: block;
 }
 
-/* --- SEARCH BAR --- */
-.search-box input {
-  padding: 15px 30px;
-  border-radius: 50px;
-  border: 2px solid #eee;
-  width: 350px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.3s;
+/* --- Fix for History Section Search Bar --- */
+.section-header {
+    display: flex;
+    flex-direction: column; /* This forces the search bar BELOW the title */
+    align-items: flex-start; /* Aligns everything to the left */
+    gap: 15px; /* Adds space between the title and the search bar */
+    padding: 20px 0;
 }
 
-.search-box input:focus {
-  border-color: #004d33;
-  box-shadow: 0 5px 15px rgba(0,77,51,0.1);
+.search-box {
+    width: 100%; /* Makes the search box take the full width of the phone */
 }
+
+#presSearch {
+    width: 100%; /* Makes the input field fill the search box */
+    padding: 12px;
+    border: 2px solid #008000; /* Zazzau Green border */
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Ensure the title doesn't have extra margins that push things away */
+.section-title {
+    margin: 0;
+    line-height: 1.2;
+}
+
 
 /* --- GRID & CARDS --- */
 .presidents-grid {
@@ -896,23 +934,60 @@
   .history-nav-sidebar { display: none; }
 }
 /* --- GALLERY PAGE STYLES --- */
+/* --- DECORATION FOR GALLERY HERO --- */
 .gallery-hero {
-  padding: 100px 20px;
-  background: #003d3d;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #003d3d 0%, #002525 100%); /* Adds depth */
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #a3cc4e; /* Elegant bottom accent line */
+}
+
+/* Adding a decorative 'frame' feel */
+.gallery-hero::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid rgba(163, 204, 78, 0.2); /* Subtle inner gold frame */
+  pointer-events: none;
+}
+
+.gallery-hero h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Makes text pop */
 }
 
 .gallery-hero h1 span {
   color: #a3cc4e;
+  position: relative;
 }
 
-.gallery-container {
-  max-width: 1400px;
-  margin: 50px auto;
-  padding: 0 20px;
+/* Adds a small decorative underline just for the word 'Memories' */
+.gallery-hero h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #a3cc4e;
 }
 
+.gallery-hero p {
+  font-style: italic;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -976,69 +1051,69 @@
 }
 /* --- 1. Desktop Navigation (Base Styles) --- */
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
 }
 
 .menu-toggle {
-  display: none; /* Hidden by default on big screens */
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none; /* Hidden by default on big screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
 
 .menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #008000;
-  transition: 0.3s;
+    width: 25px;
+    height: 3px;
+    background-color: #008000;
+    transition: 0.3s;
 }
 
 /* --- 2. Mobile Navigation (The Media Query) --- */
 @media screen and (max-width: 992px) {
-  
-  .menu-toggle {
-      display: flex; /* Shows only on mobile/tablets */
-  }
+    
+    .menu-toggle {
+        display: flex; /* Shows only on mobile/tablets */
+    }
 
-  .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%; /* Keeps it hidden off-screen */
-      width: 280px;
-      height: 100vh;
-      background-color: #003d3d; /* Dark Teal */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 100px;
-      transition: 0.5s ease;
-      z-index: 1000;
-  }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Keeps it hidden off-screen */
+        width: 280px;
+        height: 100vh;
+        background-color: #003d3d; /* Dark Teal */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        transition: 0.5s ease;
+        z-index: 1000;
+    }
 
-  /* This class is added by JavaScript when you click */
-  .nav-links.active {
-      right: 0; 
-  }
+    /* This class is added by JavaScript when you click */
+    .nav-links.active {
+        right: 0; 
+    }
 
-  .nav-links a {
-      color: white !important;
-      margin: 15px 0;
-      font-size: 1.2rem;
-  }
+    .nav-links a {
+        color: white !important;
+        margin: 15px 0;
+        font-size: 1.2rem;
+    }
 
-  /* Dropdown adjustment for mobile */
-  .dropdown-content {
-      position: relative;
-      display: none;
-      background: rgba(255, 255, 255, 0.1);
-      width: 100%;
-      text-align: center;
-  }
+    /* Dropdown adjustment for mobile */
+    .dropdown-content {
+        position: relative;
+        display: none;
+        background: rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: center;
+    }
 
-  .dropdown:hover .dropdown-content {
-      display: block;
-  }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 }
