@@ -128,3 +128,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   statTitles.forEach((title) => observer.observe(title));
 });
+/* --- PRESIDENTIAL MESSAGE SLIDER --- */
+let presIndex = 0;
+function runPresSlider() {
+    let i;
+    let slides = document.getElementsByClassName("pres-slide");
+    if (slides.length === 0) return;
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    presIndex++;
+    if (presIndex > slides.length) {presIndex = 1}    
+    slides[presIndex-1].style.display = "block";  
+    setTimeout(runPresSlider, 4000); // Change image every 4 seconds
+}
+// Run it!
+document.addEventListener("DOMContentLoaded", runPresSlider);

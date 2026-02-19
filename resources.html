@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | NAZAS National</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/nazas-logo.png" alt="NAZAS Logo">
+                <div class="logo-text-wrapper">
+                    <span class="logo-main-text">NAZAS</span>
+                    <span class="logo-sub-text">National Association of Zazzau Students</span>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="leadership.html" class="active">Leadership</a>
+                <a href="history.html">History</a>
+                <a href="gallery.html">Gallery</a>
+               
+                <a href="resources.html">Resources</a>
+            </nav>
+        </div>
+    </header>
+    <section class="gallery-hero">
+        <h1>Library & <span>Resources</span></h1>
+        <p>Official documents, magazines, and historical interviews.</p>
+    </section>
+
+    <main class="gallery-container">
+        <div class="resource-list">
+            
+            <div class="resource-card">
+                <div class="res-icon"><i class="fas fa-gavel"></i></div>
+                <div class="res-info">
+                    <h3>NAZAS National Constitution</h3>
+                    <p>The revised constitution governing all Zazzau students.</p>
+                </div>
+                <a href="docs/constitution.pdf" class="download-btn">PDF <i class="fas fa-download"></i></a>
+            </div>
+
+            <div class="resource-card">
+                <div class="res-icon"><i class="fas fa-book-open"></i></div>
+                <div class="res-info">
+                    <h3>25th Anniversary Magazine</h3>
+                    <p>A special publication documenting our silver jubilee.</p>
+                </div>
+                <a href="docs/magazine.pdf" class="download-btn">Read <i class="fas fa-eye"></i></a>
+            </div>
+
+            <div class="resource-card">
+                <div class="res-icon"><i class="fas fa-microphone-lines"></i></div>
+                <div class="res-info">
+                    <h3>Exclusive Interviews</h3>
+                    <p>Conversations with patrons and past national leaders.</p>
+                </div>
+                <a href="#" class="download-btn">Watch <i class="fas fa-play"></i></a>
+            </div>
+
+        </div>
+
+    <footer id="contact" class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/nazas-logo.png" alt="NAZAS Logo">
+                    <h3>NATIONAL ASSOCIATION OF <br> <span>ZAZZAU STUDENTS</span></h3>
+                </div>
+                <p class="footer-desc">
+                    This is the umbrella body of all Zazzau students across higher institutions. 
+                    Feel free to contact us for partnerships, support, or inquiries regarding 
+                    student welfare and heritage.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cq1PPAZNX/"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://whatsapp.com/channel/0029VbAqDoECXC3B7Zv0oj11"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="footer-bottom">
+            <p>Copyright ©2026 National Association Of Zazzau Students. Designed by <span>Flinix Technologies LTD.</span></p>
+        </div>
+      </footer>
+
+    </main>
+    <script>
+        const menuBtn = document.querySelector('#mobile-menu');
+        const navMenu = document.querySelector('.nav-links');
+      
+        // 1. Open/Close when clicking the hamburger icon
+        menuBtn.addEventListener('click', (e) => {
+          navMenu.classList.toggle('active');
+          e.stopPropagation(); // Stops the click from immediately hitting the 'window'
+        });
+      
+        // 2. THE FIX: Close when clicking anywhere outside the green menu
+        window.addEventListener('click', (e) => {
+          // If the menu is open AND the click was NOT on the menu or the button
+          if (navMenu.classList.contains('active')) {
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+              navMenu.classList.remove('active');
+            }
+          }
+        });
+      
+        // 3. Close when clicking a link (optional, but good for one-page sections)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+          });
+        });
+      </script>
+    </body>
+</html>

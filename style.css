@@ -1117,3 +1117,202 @@ html, body {
         display: block;
     }
 }
+/* --- LEADERSHIP CARDS --- */
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.leader-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  border-bottom: 5px solid #008000;
+}
+
+.leader-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #a3cc4e;
+}
+
+/* --- RESOURCE STYLING --- */
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.res-icon {
+  font-size: 2.5rem;
+  color: #003d3d;
+  margin-right: 25px;
+}
+
+.res-info h3 { margin-bottom: 5px; color: #003d3d; }
+
+.download-btn {
+  margin-left: auto;
+  background: #008000;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.action-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #a3cc4e;
+  color: #003d3d;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* --- MOBILE FIXES --- */
+@media screen and (max-width: 768px) {
+  .resource-card {
+      flex-direction: column;
+      text-align: center;
+  }
+  .res-icon { margin-right: 0; margin-bottom: 15px; }
+  .download-btn { width: 100%; margin-top: 20px; }
+}
+/* This creates a dark overlay over the rest of the page when menu is active */
+.nav-links.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Dim the rest of the page */
+    z-index: -1; /* Puts the darkness behind the text links */
+}
+/* The Overlay - Hidden by default */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dim effect */
+  z-index: 998; /* Just below the nav-links */
+  display: none; /* Hidden */
+}
+
+/* Show overlay when menu is active */
+.menu-overlay.show {
+  display: block;
+}
+
+/* Ensure your nav-links have a higher z-index to stay on top */
+.nav-links {
+  z-index: 999 !important;
+}
+/* This ensures the modal content can be scrolled on long bios */
+#profileModal {
+  overflow-y: auto; /* Adds a scrollbar if the content is too long */
+  -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iPhones */
+}
+
+.modal-content {
+  max-height: 90vh; /* Keeps the modal from being taller than the screen */
+  overflow-y: auto; /* Allows scrolling inside the white box */
+}
+.presidential-message {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.message-visual {
+    flex: 0 0 40%; /* Image takes 40% width */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 20px 20px 0px #a3cc4e; /* Stylish offset background box */
+}
+
+.pres-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.message-text {
+    flex: 1;
+}
+
+.sub-heading {
+    color: #a3cc4e;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    color: #003d3d;
+    opacity: 0.1;
+    display: block;
+    margin-bottom: -20px;
+}
+
+.message-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.pres-signature h4 {
+    color: #003d3d;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+/* Mobile Responsiveness: Stack it "Straight" */
+@media screen and (max-width: 900px) {
+    .message-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .message-visual {
+        width: 100%;
+        box-shadow: 10px 10px 0px #a3cc4e;
+    }
+    .pres-slide img {
+        height: 400px;
+    }
+}
